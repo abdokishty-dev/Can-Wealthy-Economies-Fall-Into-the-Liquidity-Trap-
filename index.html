@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>حين يصبح الريع عبئاً: من العجز التشغيلي إلى الإفلاس الفني في الاقتصادات أحادية المورد</title>
+<meta name="description" content="ورقة بيضاء تفرّق بين العجز المالي التشغيلي والإفلاس الفني والتعثر السيادي، وتختبر صمود الاقتصادات الريعية أحادية المورد تحت الإجهاد.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="هل الريع ملاءة أم وهم سيولة؟ من العجز التشغيلي إلى الإفلاس الفني">
+<meta property="og:description" content="ورقة بيضاء: فجوات السيولة، مقصلة الإنفاق الرأسمالي، واختبارات الإجهاد للاقتصادات أحادية المورد.">
+<meta property="og:image" content="cover.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#0b1530;--ink2:#14224a;--teal:#4fd8c8;--sky:#6cc4ff;--paper:#0b1530;--card:#14224a;--tx:#e6eeff;--mute:#9fb0d6;--line:#2b3d6e;--warn:#e2a23b;--bad:#d9534f;--ok:#1f9d8a}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--paper);color:var(--tx);font-family:"Tajawal","Segoe UI",Tahoma,Arial,sans-serif;font-size:18px;line-height:1.95}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--sky);outline-offset:2px}
+/* nav */
+.bar{position:sticky;top:0;z-index:20;background:rgba(11,21,48,.96);backdrop-filter:blur(6px);display:flex;gap:6px;align-items:center;padding:10px 20px;overflow-x:auto;white-space:nowrap}
+.bar a{color:#cfe0ff;text-decoration:none;font-size:15px;padding:6px 12px;border-radius:8px}
+.bar a:hover,.bar a.on{background:var(--ink2);color:var(--teal)}
+.bar .sp{flex:1}
+.btn{font:inherit;font-size:15px;font-weight:700;border:0;border-radius:8px;padding:8px 14px;cursor:pointer;background:var(--teal);color:var(--ink);text-decoration:none;display:inline-block}
+.btn.alt{background:transparent;color:#cfe0ff;border:1px solid #3a4c7e}
+.btn:hover{filter:brightness(1.1)}
+/* hero = opening slide */
+.hero{position:relative;min-height:calc(100vh - 56px);display:flex;flex-direction:column;overflow:hidden;color:#fff;background:radial-gradient(ellipse 70% 60% at 50% 42%,#183a66 0,#0e1d44 45%,#070e24 100%)}
+.hero::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent 0 119px,rgba(108,196,255,.05) 119px 120px);pointer-events:none}
+.hero::after{content:"";position:absolute;top:0;bottom:0;width:38%;left:-45%;background:linear-gradient(100deg,transparent,rgba(79,216,200,.10),transparent);transform:skewX(-14deg);animation:sweep 5.5s .6s ease-out 1 forwards;pointer-events:none}
+@keyframes sweep{to{left:120%}}
+.lb{height:34px;background:#000;border-top:1px solid #1d3b66;border-bottom:1px solid #1d3b66;flex:none;position:relative;z-index:1}
+.stage{flex:1;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:40px 24px;position:relative;z-index:1}
+.kick{color:var(--teal);font-size:18px;margin:0 0 22px;letter-spacing:.02em}
+.hero h1{margin:0;font-weight:800;line-height:1.3;font-size:clamp(38px,7.2vw,92px)}
+.hero h1 span{display:block;animation:focus 1.5s cubic-bezier(.2,.7,.2,1) both}
+.hero h1 .l2{color:var(--sky);font-size:.62em;margin-top:.15em;animation-delay:.5s}
+@keyframes focus{from{opacity:0;filter:blur(14px);letter-spacing:.12em}to{opacity:1;filter:blur(0);letter-spacing:0}}
+.hero .sub{max-width:680px;color:#b9c6e4;font-size:19px;margin:30px 0 32px;animation:focus 1.5s 1s both}
+.go{display:inline-block;border:1px solid var(--teal);color:var(--teal);text-decoration:none;padding:10px 28px;border-radius:30px;font-weight:700;font-size:16px;animation:focus 1.2s 1.4s both}
+.go:hover{background:var(--teal);color:var(--ink)}
+.credits{position:relative;z-index:1;text-align:center;padding:16px 20px 20px;font-size:15px;color:var(--sky)}
+.credits b{display:block;color:#fff;font-size:20px;letter-spacing:.03em}
+.kpis{max-width:1100px;margin:30px auto 0;padding:0 22px;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.kpi{border:1px solid #2b4a7a;border-radius:12px;padding:14px 18px;background:rgba(255,255,255,.04)}
+.kpi b{display:block;color:var(--teal);font-size:17px}.kpi small{color:#b9c6e4;font-size:14px;line-height:1.6;display:block}
+/* body */
+main{max-width:860px;margin:auto;padding:30px 22px 10px}
+section{padding:36px 0;border-bottom:1px solid var(--line)}
+h2{font-size:30px;line-height:1.5;margin:0 0 6px;color:#fff}
+h2 i{font-style:normal;color:var(--teal);font-size:16px;font-weight:500;display:block}
+h3{font-size:21px;margin:26px 0 4px;color:var(--sky)}
+p{margin:10px 0}
+.ref{color:#8fa6d6;font-size:14.5px}
+.eq{direction:ltr;text-align:left;background:#14224a;color:#dbe7ff;border-right:4px solid var(--teal);padding:12px 16px;border-radius:6px;font-family:Consolas,monospace;font-size:15px;line-height:1.8;overflow-x:auto;margin:14px 0}
+.tw{overflow-x:auto;margin:16px 0}
+table{border-collapse:collapse;width:100%;min-width:560px;background:var(--card);font-size:16px}
+th,td{border:1px solid var(--line);padding:10px 12px;text-align:right;vertical-align:top;line-height:1.7}
+th{background:#1b2d63;color:#fff}
+.note{background:#2a2a3f;border:1px solid #6b5a2e;color:#f1deb0;border-radius:8px;padding:12px 16px;font-size:16px}
+.flow{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:18px 0;counter-reset:s}
+.flow div{background:var(--card);border:1px solid var(--line);border-top:4px solid var(--teal);border-radius:8px;padding:12px;font-size:15px;line-height:1.7;counter-increment:s}
+.flow div:nth-child(3){border-top-color:var(--warn)}.flow div:nth-child(4){border-top-color:var(--bad)}
+.flow b{display:block;font-size:16px}.flow b::before{content:counter(s) "· ";color:var(--mute)}
+/* lab */
+.lab{background:#101d44;border:1px solid #2b3d6e;color:#e6eeff;border-radius:14px;padding:22px;margin:20px 0}
+.lab label{display:flex;justify-content:space-between;font-size:16px}
+.lab input{width:100%;accent-color:var(--teal);margin:8px 0 18px}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.pf{background:var(--ink2);border-radius:10px;padding:16px}
+.pf h4{margin:0 0 8px;font-size:17px;color:var(--sky)}
+.pf .r{display:flex;justify-content:space-between;font-size:15px;border-bottom:1px dashed #2e4272;padding:4px 0}
+.meter{height:12px;background:#24376a;border-radius:6px;margin:10px 0 4px;overflow:hidden}
+.meter i{display:block;height:100%;width:0;background:var(--ok);transition:width .35s}
+.st{font-weight:700;font-size:16px}
+svg text{font-family:inherit}
+.chart{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px;margin:16px 0}
+ol.refs{font-size:15px;color:var(--mute);line-height:1.8;direction:ltr;text-align:left}
+footer{background:#08102a;border-top:1px solid #2b3d6e;color:#cfe0ff;text-align:center;padding:30px 20px;margin-top:30px;font-size:17px}
+@media(max-width:760px){.kpis,.cols,.flow{grid-template-columns:1fr}.lb{height:20px}body{font-size:17px}}
+@media print{.hero{min-height:0}.hero::before,.hero::after{display:none}:root{--paper:#fff;--card:#fff;--tx:#14203a;--mute:#5b6784;--line:#ccd3e3}h2{color:#0b1530}h3{color:#14224a}.eq{background:#eef2fa;color:#14203a}.note{background:#fff8e8;color:#14203a}.lab,.pf{background:#fff!important;color:#14203a}footer{background:#fff;color:#14203a}.ref{color:#5b6784}.bar,.lab input,.no-print{display:none!important}.hero{background:#0b1530!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}body{background:#fff;font-size:14px}section{break-inside:avoid-page}th{-webkit-print-color-adjust:exact;print-color-adjust:exact}.lab{border:1px solid #999}}
+@media(prefers-reduced-motion:reduce){.hero::after{display:none}.hero h1 span,.hero .sub,.go{animation:none}*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<nav class="bar" aria-label="التنقل بين الأقسام">
+<a href="#s1">المفاهيم</a><a href="#s2">ميكانيكية التحول</a><a href="#s3">الإنفاق الرأسمالي</a><a href="#s4">اختبارات الإجهاد</a><a href="#s5">التوصيات</a><a href="#refs">المراجع</a>
+<span class="sp"></span>
+<button class="btn alt" onclick="window.print()">طباعة / PDF</button>
+<a class="btn" id="bLi" target="_blank" rel="noopener">مشاركة على LinkedIn</a>
+</nav>
+
+<header class="hero">
+<div class="lb" aria-hidden="true"></div>
+<div class="stage">
+<p class="kick">ورقة بيضاء في الاقتصاد والتمويل السيادي</p>
+<h1><span class="l1">حين يصبح الريع عبئاً</span><span class="l2">من العجز التشغيلي إلى الإفلاس الفني؟</span></h1>
+<p class="sub">ثلاث حالات يخلطها النقاش العام: عجز تشغيلي، ومأزق سيولة، وتعثر سيادي. نفصل بينها ونختبر صمود الاقتصادات أحادية المورد تحت الإجهاد.</p>
+<a class="go" href="#s1">ابدأ القراءة</a>
+</div>
+<div class="credits"><b>عبدالفتاح قشطي</b><span>مطوّر نظم ورقابة مالية — المنظومة الحديثة للإدارة المالية</span></div>
+<div class="lb" aria-hidden="true"></div>
+</header>
+<div class="kpis">
+<div class="kpi"><b>سعر التعادل المالي</b><small>السعر الذي يتساوى عنده الإنفاق مع الإيراد المورد‑المرتبط.</small></div>
+<div class="kpi"><b>تغطية السيولة (LCR سيادي)</b><small>الأصول السائلة ÷ احتياجات التمويل الإجمالية لـ12 شهراً.</small></div>
+<div class="kpi"><b>احتياجات التمويل الإجمالية</b><small>العجز الأولي + الفوائد + أقساط الدين المستحقة.</small></div>
+</div>
+
+<main>
+<section id="s1">
+<h2>1. المقدمة والإطار المفهومي<i>تعريف الاقتصاد الريعي والتفرقة بين العجز والإفلاس الفني</i></h2>
+<p>الاقتصاد الريعي أحادي المورد هو اقتصاد تتجاوز فيه حصة مورد طبيعي واحد غالبية الإيرادات المالية وحصيلة التصدير، وتأتي فيه الإيرادات من الريع (الفارق بين سعر البيع وتكلفة الاستخراج) لا من إنتاجية القاعدة الضريبية المحلية. ويربط أدب «لعنة الموارد» هذا الهيكل بتقلب الإيرادات وضعف التنويع وهشاشة المؤسسات <span class="ref">(Auty, 1993؛ Sachs & Warner, 1995؛ Mehlum, Moene & Torvik, 2006؛ van der Ploeg, 2011؛ Frankel, 2012)</span>.</p>
+<p>جوهر الورقة أن الخلط بين ثلاثة مفاهيم يُنتج تشخيصاً خاطئاً وعلاجاً خاطئاً:</p>
+<div class="tw"><table>
+<tr><th>المفهوم</th><th>التعريف الدقيق</th><th>المؤشر القابل للقياس</th></tr>
+<tr><td>العجز المالي التشغيلي</td><td>فجوة سنوية بين الإنفاق الجاري والإيراد، بغض النظر عن حجم الأصول. هو متغير تدفقي (Flow).</td><td>الرصيد الأولي غير المورد‑المرتبط ÷ الناتج غير المورد‑المرتبط؛ سعر التعادل المالي</td></tr>
+<tr><td>الإفلاس الفني (مأزق السيولة)</td><td>العجز عن الوفاء بالالتزامات عند استحقاقها رغم أن صافي الثروة السيادية موجب. إخفاق في التوقيت لا في الملاءة <span class="ref">(Calvo, 1988؛ Cole & Kehoe, 2000)</span>.</td><td>LCR سيادي أقل من 1؛ تركّز آجال الاستحقاق؛ نسبة الأصول غير السائلة</td></tr>
+<tr><td>التعثر السيادي التام</td><td>إعلان رسمي أو فعلي بعدم السداد أو إعادة هيكلة الدين بشروط أدنى من التعاقد <span class="ref">(Reinhart & Rogoff, 2009)</span>.</td><td>التخلف عن دفعة؛ تبادل قسري للديون؛ تصنيف «تعثر انتقائي»</td></tr>
+</table></div>
+<p>رياضياً، تتحقق <b>الملاءة</b> عندما تقيّد القيمة الحالية للفوائض الأولية المستقبلية الدين القائم: <span class="ref">(Bohn, 1998؛ IMF, Debt Sustainability Framework)</span></p>
+<div class="eq">B<sub>0</sub> + A<sub>0</sub> &le; PV( &Sigma; s<sub>t</sub> ) ,&nbsp; s<sub>t</sub> = T<sub>t</sub> + R<sub>t</sub>(P) &minus; G<sub>t</sub></div>
+<p>أما <b>السيولة</b> فشرطها آني، ويمكن أن ينكسر وحده:</p>
+<div class="eq">LCR = L / GFN<sub>12m</sub> ,&nbsp; GFN = (G &minus; T &minus; R(P)) + i·B + Amort<br>العجز التشغيلي ≠ عدم الملاءة ≠ التعثر؛ لكنها حلقات قابلة للتسلسل.</div>
+<p class="note">تنبيه منهجي: النماذج والأرقام في هذه الورقة توضيحية (Stylized) ولا تصف دولة بعينها، وهدفها إبراز الميكانيكية لا التنبؤ.</p>
+</section>
+
+<section id="s2">
+<h2>2. ميكانيكية التحول من العجز إلى الإفلاس الفني<i>فجوات السيولة، وتزامن الاستحقاقات، ومخاطر التسييل السريع</i></h2>
+<h3>2.1 دورة التحويل النقدي السيادية</h3>
+<p>بالمقارنة مع دورة التحويل النقدي للشركات (CCC)، تواجه الحكومة فجوة زمنية بين <b>التزام الإنفاق</b> (رواتب ودعم وفوائد تُدفع بجداول ثابتة) و<b>تحصيل الريع</b> (يتبع سعراً متقلباً وجدول شحن وتسوية). وكلما طالت هذه الفجوة وارتفع تباينها، زادت الحاجة إلى عازل نقدي. وهذا استخدام تحليلي مقترح للمفهوم لا مقياس معياري في أدبيات الدين العام.</p>
+<div class="eq">Sovereign CCC ≈ DSO<sub>rent</sub> (تأخر تحصيل الريع) + DIO<sub>assets</sub> (زمن تسييل الأصول) − DPO<sub>obl</sub> (مرونة تأجيل الالتزامات)</div>
+<h3>2.2 سلسلة التحول</h3>
+<div class="flow">
+<div><b>عجز تشغيلي</b>سعر السوق دون سعر التعادل المالي لفترة مستمرة.</div>
+<div><b>استنزاف السيولة</b>يمول العجز من الأصول السائلة أولاً، فتتآكل طبقة العازل.</div>
+<div><b>تزامن الاستحقاقات</b>تتجمع الأقساط في نافذة قصيرة بينما الثروة محتجزة في أصول طويلة الأجل.</div>
+<div><b>مأزق السيولة</b>ثروة موجبة لكن النقد المتاح لا يغطي GFN؛ وهنا يقع الإفلاس الفني.</div>
+</div>
+<h3>2.3 وفرة الأصول لا تعني توفر النقد</h3>
+<p>قد تحتفظ الاقتصادات ذات الملاءة الكبيرة بأصول سيادية ضخمة، غير أن جزءاً منها استثمارات غير مدرجة أو طويلة الأجل أو مقيدة بتفويض مؤسسي. ويُنتج بيعها تحت الضغط خصماً سعرياً (Fire-sale discount) يضاعف الخسارة، ويرسل إشارة سلبية للمستثمرين فتتحول أزمة السيولة إلى أزمة ثقة وفق منطق الأزمات ذاتية التحقق <span class="ref">(Calvo, 1988؛ Diamond & Dybvig, 1983 في منطق الجري على السيولة)</span>. وتُظهر أدبيات «التعرض للصدمات» أن تقلب سعر المورد هو القناة الأقوى لتحويل العجز إلى ضغط تمويلي <span class="ref">(Frankel, 2012؛ Bems & de Carvalho Filho, 2011 في الادخار الاحترازي لمصدّري الموارد الناضبة)</span>.</p>
+<h3>2.3 مخاطر إعادة التمويل</h3>
+<p>تتفاقم المخاطر حين يتزامن (أ) انخفاض السعر، (ب) ارتفاع علاوة المخاطر، (ج) تركّز الاستحقاق. ويقيس مؤشر <b>Debt Intolerance</b> مدى هشاشة الاقتصادات عند مستويات دين تبدو معتدلة <span class="ref">(Reinhart, Rogoff & Savastano, 2003)</span>. وتوصي أطر إدارة الدين العام بتوزيع الآجال وتحديد سقف للاستحقاق السنوي <span class="ref">(IMF–World Bank, Guidelines for Public Debt Management, 2014)</span>.</p>
+</section>
+
+<section id="s3">
+<h2>3. مقصلة الإنفاق الرأسمالي والنمو<i>حماية الإنفاق الجاري على حساب التطوير</i></h2>
+<p>عند الضغط، يبدو الإنفاق الرأسمالي أسهل بنود الموازنة تأجيلاً سياسياً وإدارياً، بينما الأجور والدعم والفوائد جامدة. ينتج عن ذلك ما يمكن تسميته <b>مقصلة الإنفاق الرأسمالي</b>: يحمي المال العام الاستهلاك الحاضر ويضحي بالطاقة الإنتاجية المستقبلية. وتتصل هذه الدعوى بتقدير أثر رأس المال العام في الإنتاجية <span class="ref">(Aschauer, 1989، وأدبيات رأس المال العام لدى صندوق النقد والبنك الدولي)</span>.</p>
+<div class="chart" role="img" aria-label="رسم توضيحي: يرتفع الإنفاق الجاري بينما ينكمش الإنفاق الرأسمالي عبر خمس سنوات">
+<svg viewBox="0 0 640 230" width="100%">
+<g stroke="#2b3d6e"><line x1="50" y1="30" x2="620" y2="30"/><line x1="50" y1="90" x2="620" y2="90"/><line x1="50" y1="150" x2="620" y2="150"/><line x1="50" y1="200" x2="620" y2="200"/></g>
+<polyline fill="none" stroke="#d9534f" stroke-width="3" points="620,120 505,112 392,100 278,84 165,66"/>
+<polyline fill="none" stroke="#1f9d8a" stroke-width="3" points="620,120 505,142 392,162 278,178 165,190"/>
+<g fill="#9fb0d6" font-size="13" text-anchor="middle"><text x="620" y="220">س1</text><text x="505" y="220">س2</text><text x="392" y="220">س3</text><text x="278" y="220">س4</text><text x="165" y="220">س5</text></g>
+<text x="150" y="58" fill="#d9534f" font-size="14" text-anchor="end">إنفاق جاري (مؤشر 121)</text>
+<text x="150" y="188" fill="#1f9d8a" font-size="14" text-anchor="end">إنفاق رأسمالي (مؤشر 30)</text>
+<text x="620" y="16" fill="#9fb0d6" font-size="12" text-anchor="start">مؤشر، السنة 1 = 100 (توضيحي)</text>
+</svg></div>
+<h3>3.1 مزاحمة القطاع الخاص (Crowding Out)</h3>
+<p>تعمل المزاحمة عبر قناتين: <b>مالية</b> حين يستنزف الاقتراح الحكومي المدخرات المصرفية فيرتفع تكلفة الائتمان على القطاع الخاص، و<b>هيكلية</b> حين تُبقي الدولة على توظيف وأجور تفوق إنتاجية القطاع الخاص، فيتراجع الاستثمار غير الريعي <span class="ref">(B. Friedman, 1978؛ Corden & Neary, 1982 في تضخم قطاع الموارد وانكماش القطاع القابل للتجارة)</span>.</p>
+<h3>3.2 تآكل القاعدة الضريبية المستقبلية</h3>
+<p>يؤدي تجميد التنمية إلى انكماش القطاعات التي كان يُراد منها توليد الإيراد غير المورد‑المرتبط، فيبقى الاعتماد على الريع قائماً أو يزداد. وهذا يحوّل العجز الدوري إلى عجز هيكلي، ويبتعد النظام عن قاعدة <b>تمهيد الضرائب</b> <span class="ref">(Barro, 1979)</span> وعن قاعدة الحفاظ على الثروة عبر إحلال رأس المال المنتج محل المورد الناضب <span class="ref">(Hartwick, 1977)</span>.</p>
+</section>
+
+<section id="s4">
+<h2>4. النمذجة واختبارات الإجهاد<i>الملاءة الكبيرة مقابل الاقتصادات الهشة منعدمة التنويع</i></h2>
+<p>يقارن النموذج أدناه فئتين تصنيفيتين: <b>الفئة أ</b> (ملاءة كبيرة بصندوق سيادي ضخم وتنويع جزئي)، و<b>الفئة ب</b> (اقتصاد هش بلا تنويع وبعازل نقدي محدود). حرّك شريط الصدمة لترى متى ينتقل كل منهما من عجز تشغيلي إلى ضغط سيولة.</p>
+<div class="lab" aria-live="polite">
+<label for="sh"><span>انخفاض سعر المورد</span><b id="shv">30%</b></label>
+<input type="range" id="sh" min="0" max="70" value="30">
+<div class="cols">
+<div class="pf" id="pa"></div>
+<div class="pf" id="pb"></div>
+</div>
+</div>
+<div class="tw"><table>
+<tr><th>البند (وحدات توضيحية)</th><th>الفئة أ</th><th>الفئة ب</th></tr>
+<tr><td>إيراد غير مورد‑مرتبط / إيراد المورد</td><td>20 / 80</td><td>12 / 78</td></tr>
+<tr><td>الإنفاق السنوي</td><td>95</td><td>100</td></tr>
+<tr><td>الفوائد + الأقساط</td><td>3 + 8</td><td>8 + 15</td></tr>
+<tr><td>الأصول السائلة</td><td>300</td><td>20</td></tr>
+<tr><td>سعر التعادل (مؤشر، السعر الحالي = 100)</td><td>94</td><td>113</td></tr>
+</table></div>
+<p><b>القراءة:</b> الفئة ب تتجاوز عجزها التشغيلي حتى عند السعر الأساسي لأن تعادلها فوق السعر الجاري، وعازلها النقدي لا يتجاوز أشهراً قليلة. أما الفئة أ فتحتمل صدمة كبيرة، لكن ذلك مشروط بسيولة الأصول فعلياً. وإذا تحول جزء كبير من أصولها إلى استثمارات غير قابلة للتسييل السريع، تنخفض التغطية الحقيقية وتتحول الفئة أ إلى مرشح لمأزق سيولة رغم الملاءة. تتجنب الأطر المعتمدة للصناديق السيادية هذا الخلط بوضوح الحوكمة وقواعد السحب <span class="ref">(مبادئ GAPP الطوعية للصناديق السيادية؛ أدبيات القواعد المالية لدى صندوق النقد الدولي)</span>.</p>
+</section>
+
+<section id="s5">
+<h2>5. التوصيات الهيكلية وخريطة طريق إدارة النقدية السيادية<i>لتفادي الانتقال من العجز إلى التعثر</i></h2>
+<div class="tw"><table>
+<tr><th>المرحلة</th><th>الإجراء</th><th>الأساس النظري</th></tr>
+<tr><td>0–6 أشهر: الحماية</td><td>حساب خزانة موحد (TSA) وتوقع نقدي أسبوعي؛ حد أدنى للسيولة يعادل تغطية 6 إلى 12 شهراً من GFN؛ سلّم استحقاقات يمنع تركّز السداد.</td><td>IMF Public Financial Management؛ Guidelines for Public Debt Management</td></tr>
+<tr><td>6–24 شهراً: الانضباط</td><td>قاعدة مالية مبنية على سعر مرجعي متحفظ بدل السعر الجاري؛ حماية بند الاستثمار الرأسمالي بحد أدنى؛ حوكمة للسحب من الصندوق السيادي.</td><td>Friedman: الدخل الدائم؛ Bohn, 1998؛ Frankel, 2012</td></tr>
+<tr><td>2–5 سنوات: التحول</td><td>توسيع الإيراد غير المورد‑المرتبط وإصلاح الدعم؛ تحويل الإنفاق من الاستهلاك إلى رأس المال المنتج؛ تحفيز القطاع الخاص وتخفيف المزاحمة.</td><td>Hartwick, 1977؛ van der Ploeg, 2011؛ Aschauer, 1989</td></tr>
+<tr><td>مستمر: الرقابة</td><td>لوحة مؤشرات ربع سنوية: سعر التعادل، LCR، متوسط أجل الدين، نسبة الاستحقاق خلال 12 شهراً، حصة الاستثمار الرأسمالي؛ واختبار إجهاد معلن.</td><td>IMF Debt Sustainability Framework؛ MTDS</td></tr>
+</table></div>
+<p><b>الخلاصة:</b> العجز التشغيلي قرار مالي يمكن تصحيحه، والإفلاس الفني إخفاق في إدارة الوقت والسيولة، أما التعثر السيادي فنتيجة متأخرة لتراكم هذين الخطأين. وتتمثل القاعدة العملية في فصل قرار الإنفاق عن سعر المورد اللحظي، وقياس الوضع بالسيولة وسعر التعادل معاً لا بحجم الأصول وحدها.</p>
+</section>
+
+<section id="refs">
+<h2>المراجع</h2>
+<ol class="refs">
+<li>Auty, R. (1993). Sustaining Development in Mineral Economies: The Resource Curse Thesis. Routledge.</li>
+<li>Sachs, J. & Warner, A. (1995). Natural Resource Abundance and Economic Growth. NBER Working Paper 5398.</li>
+<li>Mehlum, H., Moene, K. & Torvik, R. (2006). Institutions and the Resource Curse. Economic Journal, 116.</li>
+<li>van der Ploeg, F. (2011). Natural Resources: Curse or Blessing? Journal of Economic Literature, 49(2).</li>
+<li>Frankel, J. (2012). The Natural Resource Curse: A Survey of Diagnoses and Some Prescriptions. HKS Working Paper RWP12-014.</li>
+<li>Corden, W.M. & Neary, J.P. (1982). Booming Sector and De-Industrialisation in a Small Open Economy. Economic Journal, 92.</li>
+<li>Bohn, H. (1998). The Behavior of U.S. Public Debt and Deficits. Quarterly Journal of Economics, 113(3).</li>
+<li>Barro, R. (1979). On the Determination of the Public Debt. Journal of Political Economy, 87(5).</li>
+<li>Hartwick, J. (1977). Intergenerational Equity and the Investing of Rents from Exhaustible Resources. American Economic Review, 67(5).</li>
+<li>Calvo, G. (1988). Servicing the Public Debt: The Role of Expectations. American Economic Review, 78(4).</li>
+<li>Cole, H. & Kehoe, T. (2000). Self-Fulfilling Debt Crises. Review of Economic Studies, 67(1).</li>
+<li>Diamond, D. & Dybvig, P. (1983). Bank Runs, Deposit Insurance, and Liquidity. Journal of Political Economy, 91(3).</li>
+<li>Reinhart, C. & Rogoff, K. (2009). This Time Is Different. Princeton University Press.</li>
+<li>Reinhart, C., Rogoff, K. & Savastano, M. (2003). Debt Intolerance. Brookings Papers on Economic Activity.</li>
+<li>Bems, R. & de Carvalho Filho, I. (2011). The Current Account and Precautionary Savings for Exporters of Exhaustible Resources. Journal of International Economics, 84(1).</li>
+<li>Friedman, B. (1978). Crowding Out or Crowding In? Brookings Papers on Economic Activity.</li>
+<li>Aschauer, D. (1989). Is Public Expenditure Productive? Journal of Monetary Economics, 23(2).</li>
+<li>IMF & World Bank (2014). Revised Guidelines for Public Debt Management; IMF Debt Sustainability Framework and Medium-Term Debt Strategy (MTDS).</li>
+</ol>
+<p class="note">يرجى مراجعة الإصدارات والأرقام الدقيقة للمراجع قبل الاستشهاد الأكاديمي الرسمي؛ فهذه الورقة تحليلية وتوضيحية ولا تمثل توصية استثمارية أو قانونية.</p>
+</section>
+</main>
+
+<footer>عبد الفتاح قشطي - مطور نظم ورقابة مالية - المنظومة الحديثة للإدارة المالية - صدقة جارية على روح والدي</footer>
+
+<script>
+(function(){
+var $=function(i){return document.getElementById(i)};
+$('bLi').href='https://www.linkedin.com/sharing/share-offsite/?url='+encodeURIComponent(location.href);
+var P={
+a:{n:'الفئة أ: ملاءة كبيرة',nr:20,r:80,g:95,i:3,am:8,l:300},
+b:{n:'الفئة ب: اقتصاد هش',nr:12,r:78,g:100,i:8,am:15,l:20}};
+function calc(p,s){
+var rev=p.nr+p.r*(1-s), gap=p.g-rev, gfn=Math.max(gap,0)+p.i+p.am,
+months=p.l/(gfn/12), be=(p.g-p.nr)/p.r*100;
+return{rev:rev,gap:gap,gfn:gfn,m:months,be:be,price:100*(1-s)};
+}
+function status(c){
+if(c.m<12)return['مأزق سيولة محتمل (إفلاس فني)','#d9534f'];
+if(c.gap>0)return['عجز تشغيلي ممول من الاحتياطي','#e2a23b'];
+return['فائض أو توازن','#1f9d8a'];
+}
+function draw(id,p,s){
+var c=calc(p,s),st=status(c),w=Math.min(c.m/60*100,100);
+$(id).innerHTML='<h4>'+p.n+'</h4>'
++'<div class="r"><span>الإيراد المتوقع</span><b>'+c.rev.toFixed(0)+'</b></div>'
++'<div class="r"><span>العجز الأولي</span><b>'+Math.max(c.gap,0).toFixed(0)+'</b></div>'
++'<div class="r"><span>احتياجات التمويل (GFN)</span><b>'+c.gfn.toFixed(0)+'</b></div>'
++'<div class="r"><span>سعر التعادل / السعر الحالي</span><b>'+c.be.toFixed(0)+' / '+c.price.toFixed(0)+'</b></div>'
++'<div class="meter"><i style="width:'+w+'%;background:'+st[1]+'"></i></div>'
++'<div class="r" style="border:0"><span>تغطية السيولة</span><b>'+(c.m>=60?'60+ شهراً':c.m.toFixed(1)+' شهراً')+'</b></div>'
++'<div class="st" style="color:'+st[1]+'">'+st[0]+'</div>';
+}
+function run(){var s=$('sh').value/100;$('shv').textContent=$('sh').value+'%';draw('pa',P.a,s);draw('pb',P.b,s);}
+$('sh').addEventListener('input',run);run();
+/* active nav */
+var links=[].slice.call(document.querySelectorAll('.bar a[href^="#"]'));
+if('IntersectionObserver' in window){
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){links.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+e.target.id)})}})},{rootMargin:'-40% 0px -55% 0px'});
+document.querySelectorAll('section').forEach(function(s){io.observe(s)});}
+})();
+</script>
+</body>
+</html>
